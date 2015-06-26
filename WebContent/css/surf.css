@@ -1,0 +1,290 @@
+/*   
+	version:  1.0
+	author:   Ander 
+	date: 	  20150610
+		
+*/
+
+/* 
+   RESET    
+   Resetear todos los estilos para cualquier navegador
+*/
+@import url("reset.css");
+
+/*************************
+         Fonts
+*************************/
+@font-face {
+	font-family: kikelet;
+	src: url(../fonts/kikelet/Kikelet.ttf) format('truetype');
+}
+
+/***************************** 
+      ClearFix
+*******************************/
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+
+
+/*layaouts*/
+
+
+/*
+#head{}
+#wrapper_menu{}
+	#menu{}
+#content{}
+#footer{}
+*/
+
+/****************************** 
+		MAQUETACION
+	-- SurfSearchSpot --
+*******************************/ 
+/* Layauts */
+#container {
+	width: 100%;
+}
+
+#head, #menu, #content, #foot {
+	width: 960px;
+	margin: 0 auto;
+}
+#wraper-menu {
+	width: 100%;
+	background-color: #1D1A1C;
+	margin-bottom: 2%;
+}
+
+
+/* colores y tamaños */
+#head {
+	background-color: #E6F1F6;
+	padding: 2% 0;
+}
+
+#menu {	
+	background: #000000;
+}
+	#menu ul {
+		list-style: none;
+		width: 100%;
+	}
+		#menu li{
+			float: left;
+			text-align: center;		
+			color: #FFF;
+			padding: 0.5em 1em;
+			font-size: 1.5em;
+		}
+			#menu li a {
+				text-decoration: none;
+				color: #FFF;
+			}
+		#menu li:hover{
+			background-color: #CCCCCC;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+
+#content {
+	background-color: #DDDDDD;
+}
+
+
+
+/*maquetamos las cajas*/
+	
+	#content .caja1x1 {
+		width: 24.25%;
+		height: 240px;
+		float: left;
+		margin-right: 1%;
+		background-color: blue;
+	}
+	
+	#content .caja2x1 {
+		width: 49.50%;
+		height: 240px;
+		float: left;
+		margin-right: 1%;
+		background-color: red;
+	}
+	
+	#content .caja1x2 {
+		width: 24.25%;
+		height: 489.594px;
+		float: left;
+		margin-right: 1%;
+		background-color: green;
+	}
+	
+	
+#content #fila1, #fila2, #fila3 {
+	width: 100%;
+	margin-bottom: 1%;
+}
+
+
+
+
+
+
+
+
+	#content #fila1 div:last-child, #fila2 > div:last-child, #fila3 div:last-child {
+		margin-right: 0;
+	}
+
+		#box div:first-child, #box div:nth-child(2) {
+			margin-bottom: 1%;
+		}
+		
+		#fila2 > div:last-child{
+			float: none;
+  			margin-left: 75.75%;
+		}
+
+
+
+
+
+
+
+
+#footer{background-color: pink;}
+
+/****************************************************************************************************/
+/* Se aplican estas reglas si el ancho es menor de 460px (BREAKPOINTS)*/
+@media screen and (max-width:460px) {
+	
+	h1 {
+		text-align: left;
+		padding-left: 5%;
+		font-size: 3em;
+	}
+
+	#head, #menu, #content, #foot {
+		width: 100%;
+		margin: 0;
+	}	
+	#wraper-menu {
+		display: none;
+	}
+		
+	#menu li {
+	  padding: 0.3em 0.6em;
+	  font-size: 1.1em;
+	}	
+	
+	#content #fila1, #fila2, #fila3 {
+		margin-bottom: 0;
+	}
+		
+	#content .caja1x1, #content .caja2x1, #content .caja1x2{
+		float: none;
+		width: 100%;
+		height: 250px;
+		margin: 0;
+		padding: 0;
+		margin-bottom: 1%;
+	}
+	#fila2 > div:last-child {
+  		margin-left: 0;
+	}
+	
+	i.fa {
+		display: inline;
+		position: fixed;
+		top: 1%;
+  		right: 5%;
+	}
+	
+}
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************************************
+                   reglas media querys 
+************************************************************/
+
+/* Se aplican estan reglas si el ancho es menor que 460px */
+@media screen and (max-width:460px ) {
+	#head {
+		position: fixed;
+		background-color: #FFF;
+		width: 90%;
+		padding-top: 10px;
+		z-index: 100;
+	}
+	#head #logo, #head h1 {
+		margin-left: 18%;
+		margin-top: -10%;
+	}
+	#head #logo {
+		display: none;
+	}
+	#head h1 {
+		color: red;
+		font-size: 1.2em;
+	}
+	
+	#nav_top {
+		display: inline;
+		position: fixed;
+		bottom: 10px;
+		right: 10px;
+		width: 45px;
+		height: 45px;
+	}
+	#dl-menu {
+		display: inline;
+	}
+	#dsk-menu {
+		display: none;
+	}

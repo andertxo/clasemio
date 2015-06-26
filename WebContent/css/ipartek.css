@@ -1,0 +1,94 @@
+/*   
+	version:  1.0
+	author:   Ander 
+	date: 	  20150610
+		
+*/
+
+/* 
+   RESET    
+   Resetear todos los estilos para cualquier navegador
+*/
+@import url("reset.css");
+
+/*************************
+         Fonts
+*************************/
+@font-face {
+	font-family: kikelet;
+	src: url(../fonts/kikelet/Kikelet.ttf) format('truetype');
+}
+
+/***************************** 
+      ClearFix
+*******************************/
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+
+
+/*layaouts*/
+
+
+/*
+#head{}
+	#logoipartek{}
+	#menuipartek{}{
+	
+#content{}
+	#lateralizq{}
+	#medio{}
+		#columna1{}
+		#columna2{}
+		
+	#lateralderecha{}
+#wrapperfooter{}
+	#footer{}
+*/
+
+/****************************** 
+		MAQUETACION
+	-- SurfSearchSpot --
+*******************************/ 
+/* Layauts */
+#container {width: 100%;}
+#head, #content, #footer{width: 960px;margin: 0 auto ;}
+	#head #logoipartek{width: 20%;height: 100px;float:left;}
+		#head #logoipartek img{width: 100%;height: auto;}
+	#head #menuipartek{border-radius: 12px;width: 80%;background: #0099CC;height: 100px;float:left;min-height: 62px;}
+		#social { float: right; margin: 18px 15px 0 0;text-align: right;}
+		#head #menuipartek ul {margin: 0px;list-style-type: none; padding-top: 0px;padding-right: 0px; padding-bottom: 0px;padding-left: 10px;
+		font: 18px/27px 'OpenSansRegular', Arial, sans-serif}
+		#head #menuipartek li{float:left;font-size: 13px;}
+			#head #menuipartek li a{display: block;padding-top: 20px; padding-right: 10px;padding-bottom: 20px; padding-left: 10px;color: #FFFFFF; text-decoration: none;}
+
+/*#content .lateralizq, #content .medio, #content .lateralderecha{height: 900px;}*/
+	#content .lateralizq{border-radius: 12px 12px 0px 0px!important;float:left;width: 20%;margin-right: 1%;}
+	#content .lateralizq ul{width:100%;wibackground-color: #E9E9E9!important; border-radius: 0px 0px 12px 12px!important;}
+	#content .lateralizq li{background-color: #E9E9E9!important; border-radius: 0px 0px 12px 12px!important;}
+	#content .medio{float:left;width: 58%;margin-right: 1%;}
+		#content .medio .columnaizq{float:left;width: 49%;margin-right: 1%;}
+			#content .medio .columnaizq li{list-style: none;}
+		#content .medio .columnadch{float:left;width: 49%;}
+			#content .medio .columnadch li{list-style: none;}
+			#content .medio .columnaizq li img, #content .medio .columnadch li img{width: 100%;}
+	#content .lateralderecha{float:left;width: 20%;}
+	
+#wrapperfooter{width: 100%;}
+
+	#footer {padding: 15px;text-align: left;}
+
+
+
+
+	
