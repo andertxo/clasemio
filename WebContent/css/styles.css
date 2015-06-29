@@ -428,6 +428,15 @@ form input[type="text"]:focus:required:invalid {
 	ESTILOS REUTILIZABLES
     Regla con selector por CLASS para usar en todas las paginas
 */
+/*mensage para el usuario en el mregistro de usuarios*/
+.msg_success{border: 5px solid green;
+ 
+ background-image: url('img/ok.jpg');}
+.msg_error {border: 5px solid red;
+background-image:url('img/x.jpg');}
+
+
+
 /************************************************
 				ventana modal
 ************************************************/	

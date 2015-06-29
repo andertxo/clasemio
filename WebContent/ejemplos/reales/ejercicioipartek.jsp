@@ -104,6 +104,7 @@
 							<ul>		
 								<li><img width="160px" src="img/col2_A.jpg" title="Inskripzioa AEK-ko Lankideentzat"></li>
 								<li><img width="160px" src="img/col1_C.jpg" title="Inskripzioa AEK-ko Lankideentzat"></li>
+								
 							</ul>
 					</div>
 			</div>

@@ -81,7 +81,9 @@
 			#content .medio .columnaizq li{list-style: none;}
 		#content .medio .columnadch{float:left;width: 49%;}
 			#content .medio .columnadch li{list-style: none;}
-			#content .medio .columnaizq li img, #content .medio .columnadch li img{width: 100%;}
+			#content .medio .columnaizq li img{width: 100%;}
+			#content .medio .columnadch li img{width: 100%;}
+			#content .medio .columnadch li:last-child{height: auto;}
 	#content .lateralderecha{float:left;width: 20%;}
 	
 #wrapperfooter{width: 100%;}

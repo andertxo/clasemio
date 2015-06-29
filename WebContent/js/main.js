@@ -2,6 +2,33 @@
  *   JavaScript para ejecutar en todas las paginas del proyecto
  *   Se carga en foot.jsp despues de incluir todas las librerias necesarias de JS 	
  */
+function llamadaAjax(){
+	var usuario = $("#usuario");
+	var email = $("#email");
+	var msg_box =$("msg_box");
+			 
+		 var url = "ControladorAjaxRegistroUsuario"; //url donde se encuentra el servicio Ajax
+		 
+		 $.ajax(url, 
+					{
+					 "type": "get", // usualmente post o get
+					 "success": function(result) {
+						 console.info("TODO OK", result);
+						 $(".msg_delete").remove();
+						 if(result.existe){ usuario.after("<span class='msg_delete msg_error '>NO disponible</span>"  )	 
+						 	}else { usuario.after("<span class='msg_delete msg_success'>Adelante</span>" ) }
+						 if(result.existe){ email.after("<span class='msg_delete msg_error '>NO disponible</span>"  )	 
+						 	}else { email.after("<span class='msg_delete msg_success'>Adelante</span>" ) }
+					 }, 
+					 "error": function(result) {
+						 console.error("MALLLL", result);},
+					 "data": {usuario: $("#usuario").val(),
+						 				email:'elmio@mail.com'
+					 },
+					 "async": true,
+					 });	
+	
+}
 
 //Se ejecuta cuando todo el HTML se ha cargado
 $(function() {
@@ -35,7 +62,7 @@ $(function() {
   });
 
 
-
+//codigo para las pestañas
 $(function(){
 	  $('ul.tabs li:first').addClass('active');
 	   $('.block article').hide();
@@ -49,3 +76,19 @@ $(function(){
 	     $(activeTab).show();
 	   });
 	  })
+	  
+	  
+	  
+	  $("#form_new_user #usuario").blur(function(){llamadaAjax();});
+	   
+	 $("#form_new_user #email").blur(function(){llamadaAjax();});
+		 
+	 	
+	
+	
+		 
+		
+	 //});			
+	 	
+	  
+	  
