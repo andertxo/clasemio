@@ -10,40 +10,39 @@
 		
 			<ul data-list="cartelera">
 			
-				<% for (int i=0; i<6;i++){ %>
+				<% for (int i=0; i<5;i++){ %>
 					<li>				
 						<div class="cartel">							
 							<a data-role="modal" 
-							href="<%=request.getRequestURL()%>#openModal<%=i%>" 
-							title="Ver detalle pelicula">
-								<img alt="Cartel de la pelicula X" 
-								src="http://www.cinesa.es/Manager/Peliculas/upsdndeestno/cartelera.jpg" />
-
-								<div class="titulo">
-									<h3>TITULO</h3>							
-								</div>
+							   href="<%=request.getRequestURL()%>#openModal<%=i%>" 
+							   title="Ver detalle pelicula">
+							   							
+								<img alt="Cartel de la pelicula X" src="http://www.cinesa.es/Manager/Peliculas/upsdndeestno/cartelera.jpg" />
 								
+								<div class="titulo">
+									<h3>&quest;Donde esta Noe?</h3>							
+								</div>
 							</a>							
-						</div>
+						</div>					
 						<!-- ventana modal -->
 						<div id="openModal<%=i%>" class="modalDialog">
-							<div>
-								<!-- boton de cerrar -->
+							<div class="clearfix">
 								<a href="<%=request.getRequestURL()%>#close" title="Close" class="close">X</a>
-								<h2>Cronicas de Narnia</h2>
-								<p></p>
-									<div id="caratula">
-										<img alt="Cartel pelicula 'Cronicas de Narnia'" src="http://www.cinesa.es/Manager/Peliculas/upsdndeestno/cartelera.jpg"  class="cartel" />
-										<!-- ficha -->
-										<div id="ficha">
-											<p><span class="destacado">AUTOR:</span> Periko</p>
-											<p><span class="destacado">DIRECCION:</span> Steven Spilberg </p>
-											<p><span class="destacado">VALORACION:</span> 5/10 </p>
-										</div>	
-										
-									</div>	
+								
+								<div class="sinopsisTexto">
+									<h3>Titulo   : &quest;Donde esta Noe?</h3>
+									<h3>Director : Director Pelicula</h3>
+									<h3>Sinopsis : </h3>
+									<p>sinopsis de la pelicula</p>
+								</div>
+								
+								
+								<img alt="Cartel de la pelicula X" src="http://www.cinesa.es/Manager/Peliculas/upsdndeestno/cartelera.jpg" />
+								
+
 							</div>
 						</div>
+						
 					</li>		
 				<%} %>	
 				

@@ -2,33 +2,6 @@
  *   JavaScript para ejecutar en todas las paginas del proyecto
  *   Se carga en foot.jsp despues de incluir todas las librerias necesarias de JS 	
  */
-function llamadaAjax(){
-	var usuario = $("#usuario");
-	var email = $("#email");
-	var msg_box =$("msg_box");
-			 
-		 var url = "ControladorAjaxRegistroUsuario"; //url donde se encuentra el servicio Ajax
-		 
-		 $.ajax(url, 
-					{
-					 "type": "get", // usualmente post o get
-					 "success": function(result) {
-						 console.info("TODO OK", result);
-						 $(".msg_delete").remove();
-						 if(result.existe){ usuario.after("<span class='msg_delete msg_error '>NO disponible</span>"  )	 
-						 	}else { usuario.after("<span class='msg_delete msg_success'>Adelante</span>" ) }
-						 if(result.existe){ email.after("<span class='msg_delete msg_error '>NO disponible</span>"  )	 
-						 	}else { email.after("<span class='msg_delete msg_success'>Adelante</span>" ) }
-					 }, 
-					 "error": function(result) {
-						 console.error("MALLLL", result);},
-					 "data": {usuario: $("#usuario").val(),
-						 				email:'elmio@mail.com'
-					 },
-					 "async": true,
-					 });	
-	
-}
 
 //Se ejecuta cuando todo el HTML se ha cargado
 $(function() {
@@ -59,36 +32,80 @@ $(function() {
 		//	alert("Copied text to clipboard: " + event.data["text/plain"] );
 	  } );
 	} );
-  });
-
-
-//codigo para las pestañas
-$(function(){
-	  $('ul.tabs li:first').addClass('active');
-	   $('.block article').hide();
-	  $('.block article:first').show();
-	  $('ul.tabs li').on('click',function(event){
-		  event.preventDefault();//???????????????????????????????????
-	     $('ul.tabs li').removeClass('active');
-	    $(this).addClass('active')
-	    $('.block article').hide();
-	     var activeTab = $(this).find('a').attr('href');
-	     $(activeTab).show();
-	   });
-	  })
-	  
-	  
-	  
-	  $("#form_new_user #usuario").blur(function(){llamadaAjax();});
-	   
-	 $("#form_new_user #email").blur(function(){llamadaAjax();});
-		 
-	 	
+  
 	
+	//codigo para las pestañas
+		$('ul.tabs li:first').addClass('active');
+		$('.block div').hide();
+		$('.block div:first').show();
+		$('ul.tabs li').on('click', function() {
+			$('ul.tabs li').removeClass('active');
+			$(this).addClass('active')
+			$('.block div').hide();
+			var activeTab = $(this).find('a').attr('href');
+			$(activeTab).show();
+			return false;
 	
-		 
+		})
+
 		
-	 //});			
-	 	
-	  
-	  
+	/* RESGISTRO USUARIOS control de usuarios existentes */
+	
+	//seleccionar usuario del formulario
+	$("#form_new_user #usuario").blur(function(){
+		
+		//se ejecuta al perder el foco
+		console.info("llamada Ajax");
+		
+		//Url donde se encuentra el servicio Ajax
+		var url =  "ControladorAjaxRegistroUsuario";
+		
+		$.ajax( url , {
+			"type": "get", // usualmente post o get
+			"success": function(result) {
+				console.info(result);
+				$(".msg_delete").remove();
+				if ( result.existe ){
+					$("#usuario").after("<span class='msg_delete msg_error'>Usuario NO disponible</span>");
+				}else{
+					$("#usuario").after("<span class='msg_delete msg_success'>Usuario Disponible</span>");
+				}	
+				
+				
+			},
+			"error": function(result) {
+				console.error("Error ajax", result);
+			},
+			"data": { usuario: $("#usuario").val() ,
+				      email : 'elmio@mail.com' },
+			"async": true,
+		});
+		
+		
+		
+		
+		
+		
+	});
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	
+		
+		
+});

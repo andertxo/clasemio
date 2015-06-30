@@ -108,6 +108,9 @@ p {
 	line-height: 20px;
 }
 
+img { width: 100%; height: auto;}
+
+
 mark {
 	background-color: yellow;
 }
@@ -428,111 +431,73 @@ form input[type="text"]:focus:required:invalid {
 	ESTILOS REUTILIZABLES
     Regla con selector por CLASS para usar en todas las paginas
 */
-/*mensage para el usuario en el mregistro de usuarios*/
-.msg_success{border: 5px solid green;
- 
- background-image: url('img/ok.jpg');}
-.msg_error {border: 5px solid red;
-background-image:url('img/x.jpg');}
+
+/* mensajes para el usuario */
+
+.msg_success{ border: 1px solid green;}
+.msg_error{border: 1px solid red;}
 
 
 
-/************************************************
-				ventana modal
-************************************************/	
+/* Ventana modal */
+
 .modalDialog {
 	position: fixed;
 	font-family: Arial, Helvetica, sans-serif;
-	/*posicion centrado*/
+	/*max-height:300px;*/
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	/*color de fondo*/
 	background: rgba(0,0,0,0.8);
 	z-index: 99999;
 	opacity:0;
-	/*la transicion*/
 	-webkit-transition: opacity 400ms ease-in;
 	-moz-transition: opacity 400ms ease-in;
 	transition: opacity 400ms ease-in;
 	pointer-events: none;
 }
-			.modalDialog:target {
-				opacity:1;
-				pointer-events: auto;
-			}
-			
-			.modalDialog > div {
-				width: 68%;
-				position: relative;
-				margin: 10% auto;
-				padding: 5px 20px 13px 20px;
-				border-radius: 10px;
-				background: #fff;
-				background: -moz-linear-gradient(#fff, #999);
-				background: -webkit-linear-gradient(#fff, #999);
-				background: -o-linear-gradient(#fff, #999);
-			}
-			
-			.close {
-				background: #606061;
-				color: #FFFFFF;
-				line-height: 25px;
-				position: absolute;
-				right: -12px;
-				text-align: center;
-				top: -10px;
-				width: 24px;
-				text-decoration: none;
-				font-weight: bold;
-				-webkit-border-radius: 12px;
-				-moz-border-radius: 12px;
-				border-radius: 12px;
-				-moz-box-shadow: 1px 1px 3px #000;
-				-webkit-box-shadow: 1px 1px 3px #000;
-				box-shadow: 1px 1px 3px #000;
-			}
 
-			.close:hover { background: #00d9ff; }
-			
-/****************************************/
-.modalDialog h2{
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 79%;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
+
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
 	text-align: center;
-  	font-size: 30px;
-  	color: red;
- 	text-decoration: underline;
-	
-}
-			
-.modalDialog #caratula{
-	 
- 	 margin-top: 10px;
-	
-}
-.modalDialog #caratula img{
-	
-	padding-left: 60px;
-}
-.modalDialog #caratula #ficha{
-	  width: 60%;
-    min-height: 280px;
-  margin-bottom: 2%;
-  
-  float: right;
-}
-.modalDialog #caratula #ficha p{
-	
-	  color: rebeccapurple;
-  font-size: 30px;
-}
-.modalDialog #caratula #ficha span{
-	
-	  color: rebeccapurple;
-  font-size: 30px;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
 }
 
-			
+.close:hover { background: #00d9ff; }
+
+
+
 .btn {
 	background: #3498db;
 	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
@@ -559,6 +524,40 @@ background-image:url('img/x.jpg');}
 	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
 	text-decoration: none;
 }
+
+ul.tabs {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.tabs li {
+	border: gray solid 1px;
+	border-bottom: none;
+	float: left;
+	margin: 0 .25em 0 0;
+	padding: .25em .5em;
+}
+
+ul.tabs li a {
+	color: gray;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+ul.tabs li.active {
+	background: gray;
+}
+
+ul.tabs li.active a {
+	color: white;
+}
+
+.clr {
+  clear: both;
+}
+
+
 
 /* contendor para columnas */
 .cnt_cols {
@@ -702,7 +701,7 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 
 #cartelera .cartel {
 	position: relative;
-	width: 200px;
+	width: 100%;
 }
 
 #cartelera .titulo {
@@ -723,6 +722,10 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 	color: #0099FF;
 	text-align: center;
 }
+
+#cartelera .modalDialog .sinopsisTexto { float:right; width: 48%;}
+#cartelera .modalDialog img { float: left; width: 200px; height: auto;}
+
 
 /* CARTELERA_DETALLE */
 #cartelera_detalle h1 {
@@ -775,11 +778,6 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 	height: 200px;
 	overflow: scroll;
 }
-/************************************************
-				ventana modal mas arriba
-************************************************/				
-
-
 
 /***********************************************************
                    reglas media querys 
@@ -858,96 +856,31 @@ table.tabla_azul, .tabla_azul tr, .tabla_azul td {
 		width: 100%;
 		padding-right: 0;
 	}
-	#list_paginas li{
+	
+	#list_paginas li {
 		width: 100%;
 		border-top:1px solid #DDD;
 	}
-		#list_paginas li:last-child{
-			border-bottom:1px solid #DDD;
-		}
 	
-	#list_rrss ul{padding-left:10%;}
-		#list_rrss li{width: 23%;}
-			#list_rrss li a{margin-left:15%;}
-	#foot {width: 100%;}
-		#foot .copy{float:none;}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-#cartelera li{
-		width: 48%;
-	}
-	#cartelera li .cartel img{
-		  width: 65%;
- 		 height: auto;
-  		margin-left: 2%;
-	
+	#list_paginas li:last-child {
+		border-bottom:1px solid #DDD;
 	}
 	
-.modalDialog > div {
-	height: 60%;	
-	}
-.modalDialog h2{
-	  text-align: center;
-  font-size: 20px;
-  color: rgb(0, 5, 255);
-  text-decoration: underline;
 	
-}
-			
-.modalDialog #caratula{
-	  border: 1px solid greenyellow;
- 	 margin-top: 10px;
+	#list_rrss ul{ padding-left: 10%; }	
+		#list_rrss li{ width: 23%; }
+			#list_rrss li a{margin-left: 15%;}
 	
-}
-
-
-.modalDialog #caratula #ficha{
-	width: 95%;
-  min-height: 280px;
-  margin-bottom: 2%;
-  position: relative;
-  top: 15px;
-  border: none;
-  
-}
-.modalDialog #caratula img{
-	  
-    width: 60%;
-  height: 35%;
-  /* clear: inherit; */
-  position: absolute;
- top: 230px;
-
-  padding-left: 50px;
-  border: none;    
-  	
-}
-
-
-
-
-
-.modalDialog #caratula #ficha p{
+	#foot {	width: 100%;}
+		#foot .copy{float: none;}
+		
 	
-	color: rgb(29, 206, 23);
- 	  font-size: 20px;
-}
-.modalDialog #caratula #ficha span{
+	/* Cartelera */
+	#cartelera li {	width: 48%;	}
+		#cartelera li:nth-child(2n+0) { margin-right: 0;}
+		#cartelera li:nth-child(3n+0) {	margin-right: 2%; }
 	
-	      color: rgba(206, 31, 72, 0.7);
- 		 font-size: 15px;
-}
-	
+		#cartelera .modalDialog .sinopsisTexto { float:left; width: 100%;}
+		#cartelera .modalDialog img { float: left; margin-left: 10%; }		
+		
 }

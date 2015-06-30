@@ -1,8 +1,6 @@
 <jsp:include page="../../plantillas/head.jsp"></jsp:include>
 <jsp:include page="../../plantillas/nav.jsp"></jsp:include>
 
-
-
 <h1>Ejemplo de Login</h1>
 
 
@@ -19,7 +17,10 @@
 	<input type="submit" value="Acceder" />
 
 </form>
-	<a href="ejemplos/formularios/registro.jsp" title="Registro usuarios nuevos">¿No tienes cuenta? Registrate</a>
+
+ <a href="ejemplos/formularios/registro.jsp" title="Registro usuarios nuevos">¿No tienes Cuenta? Registrate </a>
+
+
 
 
 <jsp:include page="../../plantillas/foot.jsp"></jsp:include>

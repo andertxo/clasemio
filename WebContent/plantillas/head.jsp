@@ -34,7 +34,8 @@
   <link rel="stylesheet" href="js/ResponsiveMultiLevelMenu/css/component.css">
   <script src="js/ResponsiveMultiLevelMenu/js/modernizr.custom.js" ></script>
 
-  
+  <!-- highlight code -->
+  <link rel="stylesheet" href="js/highlight/styles/railscasts.css">
   	
 
   <!--[if lt IE 9]>
@@ -62,7 +63,7 @@
 		
 	<!-- Menu movil -->
 	<div id="dl-menu" class="dl-menuwrapper"> 
-	  <button class="dl-trigger">Open Menu</button>	
+	  <button class="dl-trigger"><img src="img/dado.png" alt="dado de 6 caras icono de la App Web"/></button>	
 	 	
 	  <ul class="dl-menu">
 	  	<li>
@@ -163,6 +164,7 @@
 					<ul class="dl-submenu">
 						<li><a href="ejemplos/plugins/datatable.jsp">dataTables</a></li>
 						<li><a href="ejemplos/plugins/clipboard.jsp">ZeroClipboard</a></li>
+						<li><a href="ejemplos/plugins/grafico.jsp">Graficos - Morris.js</a></li>
 					</ul>
 				</li>
 				<li>
