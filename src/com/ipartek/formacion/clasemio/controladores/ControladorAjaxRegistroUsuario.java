@@ -52,76 +52,65 @@ public class ControladorAjaxRegistroUsuario extends HttpServlet {
 		//declarar array con los emails
 		ArrayList<String> listaEmail = new ArrayList<String>();
 		//introducir elementos
-		listaUsuarios.add("a");
-		listaUsuarios.add("b");
-		listaUsuarios.add("c");
-		listaUsuarios.add("d");
-		listaUsuarios.add("e");
-		listaUsuarios.add("f");
-		listaUsuarios.add("g");
+		listaEmail.add("a");
+		listaEmail.add("b");
+		listaEmail.add("c");
+		listaEmail.add("d");
+		listaEmail.add("e");
+		listaEmail.add("f");
+		listaEmail.add("g");
 		
 		
 		//respuesta tipo Json
-				response.setContentType("application/json");
-				response.setCharacterEncoding("utf-8");
+		response.setContentType("application/json");
+		response.setCharacterEncoding("utf-8");
 		
 		//variable(out) tipo PrintWriter para escribir response
 		PrintWriter out =response.getWriter();//getWriter objeto que puede pintar
 		
 		//out.print("hola soy una respuesta");
 		String usuario = request.getParameter("usuario");
+		
+		
 	//	String  simbolo = request.getParameter("simbolo");
-		String email = request.getParameter("email");
+	//	String email = request.getParameter("email");
 		
 		
 		if (null != usuario){
 			//comprobar que no existe el usuario
 			//out.print("ONGI ETORRI" + request.getParameter("usuario"));
-			
-			if (listaUsuarios.contains(usuario)){
-				//poner el simbolo x el usuario existe y debe introducir otro
-				
+			if (listaUsuarios.contains(usuario)){//poner el simbolo x el usuario existe y debe introducir otro
 				out.print("{ \"existe\": true , \"user\": \""+usuario+"\" }");
 			}
-			else{
-				//poner el simbolo v el usuario no existe
-				
+			else{//poner el simbolo v el usuario no existe
 				out.print("{ \"existe\": false , \"user\": \""+usuario+"\" }");
 			}
 			
 		}
-		else{
-			//poner el simbolo ? no ha introducido usuario
-			
+		else{//poner el simbolo ? no ha introducido usuario
 			out.print("{ \"existe\": \"false\" , \"user\": \"pepe\" }");
 		}
-		//libera el buffer del PrintWriter
-				out.flush();
-				
-				
+		
+		/*
 		if (null != email){
-					//comprobar que no existe el usuario
-					//out.print("ONGI ETORRI" + request.getParameter("usuario"));
-					
-					if (listaEmail.contains(email)){
-						//poner el simbolo x el usuario existe y debe introducir otro
+			//comprobar que no existe el usuario
+			//out.print("ONGI ETORRI" + request.getParameter("usuario"));
+			if (listaEmail.contains(email)){//poner el simbolo x el email existe y debe introducir otro
+				out.print("{ \"existe\": true , \"user\": \""+email+"\" }");
+			}
+			else{//poner el simbolo v el usuario no existe
+				out.print("{ \"existe\": false , \"user\": \""+email+"\" }");
+			}
+			
+		}
+		else{//poner el simbolo ? no ha introducido usuario
+			out.print("{ \"existe\": \"false\" , \"user\": \"pepe\" }");
+		}*/
+		
+		
+		
+		//libera el buffer del PrintWriter
+		out.flush();
 						
-						out.print("{ \"existe\": true , \"user\": \""+email+"\" }");
-					}
-					else{
-						//poner el simbolo v el usuario no existe
-						
-						out.print("{ \"existe\": false , \"user\": \""+email+"\" }");
-					}
-					
-				}
-				else{
-					//poner el simbolo ? no ha introducido usuario
-					
-					out.print("{ \"existe\": \"false\" , \"user\": \"asds\" }");
-				}
-				//libera el buffer del PrintWriter
-						out.flush();
-
-	}
-}
+		}//cerrar el dopost
+}//cerrar ControladorAjaxRegistroUsuario
