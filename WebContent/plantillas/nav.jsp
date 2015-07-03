@@ -63,6 +63,10 @@
 		<ul>
 			<li><a href="ejemplos/reales/cartelera.jsp">Cartelera</a></li>
 			<li><a href="ejemplos/reales/cartelera_detalle.jsp">Detalle Cartelera</a></li>
+			<li><a href="ejemplos/reales/ipartek.jsp">ipartek</a></li>
+			<li><a href="ejemplos/reales/surf.jsp">surf</a></li>
+			<li><a href="ejemplos/reales/boostrap-grid.jsp">boostrap</a></li>
+			
 		</ul>
 	</li> 
 	<li> 

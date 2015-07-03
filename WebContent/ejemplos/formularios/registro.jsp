@@ -3,21 +3,25 @@
 
 <h1>Alta nuevo Usuario</h1>
 
-<section>
+
+<!-- caja para mensajes al usuario -->
+<div id="msg_box"></div>
+
 <form action="ejemplos/formularios/controlador_new_user.jsp" 
       method="post" id="form_new_user">
 
 	<label for="usuario">Usuario:</label> 
 	<input type="text" name="usuario" id="usuario" value="" /> 
-	<!--  
+	<br>
+	
 	<label for="email">Email:</label> 
 	<input type="text" name="email" id="email" value="" /> 
 	<br>
-	 -->
-	<label for="pass">Contraseña:</label> 
+	 
+	<label for="pass">Contrase&ntilde;a:</label> 
 	<input type="password" name="pass" id="pass" value="" placeholder="solo numeros y letras"/>
 	
-	<label for="repass">Repite Contraseña:</label> 
+	<label for="repass">Repite Contrase&ntilde;a:</label> 
 	<input type="password" name="repass" id="repass" value="" placeholder="solo numeros y letras"/>
 	
 	<br />
@@ -25,7 +29,6 @@
 	<input type="submit" value="Registrate" />
 
 </form>
-</section>
 
 
 <jsp:include page="../../plantillas/foot.jsp"></jsp:include>
